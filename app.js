@@ -22,39 +22,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //Set static path
 app.use(express.static(path.join(__dirname, "public")));
 
-var users = [
-  {
-    id: 1,
-    first_name: "John",
-    last_name: "Doe",
-    email: "johndoe@aol.com"
-  },
-  {
-    id: 2,
-    first_name: "Marilyn",
-    last_name: "Manson",
-    email: "manson@aol.com"
-  },
-  {
-    id: 3,
-    first_name: "Tom",
-    last_name: "Ford",
-    email: "tom@aol.com"
-  }
-];
-
 app.get("/", function(req, res) {
-  res.render("index", {
-    title: "Customers",
-    users: users
-  });
+  res.render("index");
 });
 
-app.get("/users/add", function(req, res) {
+app.get("/contact", function(req, res) {
   res.render("contact");
 });
 
-app.post("/users/add", function(req, res) {
+app.post("/contact", function(req, res) {
   res.render("contact");
   var newUser = {
     name: req.body.name,
