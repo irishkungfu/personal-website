@@ -477,7 +477,8 @@ h3 {
   display: grid;
 }
 .portfolio-card-text {
-  background: var(--white);
+  background: var(--dark-blue);
+  color: var(--white);
   padding: 20px;
   display: grid;
   justify-content: center;
@@ -504,7 +505,8 @@ h3 {
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 100px;
+  grid-template-rows: auto auto;
+  grid-gap: 50px;
 
   grid-auto-flow: row;
   /* grid-template-rows: repeat(2, minmax(200px, max-content)); */
