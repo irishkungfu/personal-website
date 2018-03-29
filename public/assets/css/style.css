@@ -35,9 +35,9 @@ h2 {
   color: #333;
   margin-bottom: 10px;
 }
-h3 {
+/* h3 {
   font-size: 1.5rem;
-}
+} */
 .position,
 .dates {
   font-weight: 600;
@@ -429,6 +429,7 @@ input {
 }
 h3 {
   margin: 0;
+  line-height: 1.5;
 }
 .institution-body {
   padding: 0 20px;
@@ -447,6 +448,15 @@ h3 {
   padding-right: 20px;
   /* filter: grayscale(100%); */
   max-width: 120px;
+}
+.employer-body {
+  padding-top: 15px;
+}
+.job-desc {
+  line-height: 1.5;
+}
+.job-descriptions > li {
+  margin-bottom: 10px;
 }
 
 .portfolio-card {
