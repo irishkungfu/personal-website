@@ -475,23 +475,25 @@ h3 {
 }
 
 .portfolio-card {
-  background: var(--white);
+  background: var(--dark-blue);
   padding: 20px;
   display: grid;
+
   grid-template-rows: 10vh;
 }
 .portfolio-card-header {
-  color: var(--dark-blue);
+  color: var(--white);
   justify-self: center;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 4vh;
   text-align: center;
 }
 .portfolio-card-body {
   display: grid;
 }
 .portfolio-card-text {
-  color: var(--black);
+  background: var(--dark-blue);
+  color: var(--white);
   padding: 20px;
   display: grid;
   justify-content: center;
@@ -506,20 +508,18 @@ h3 {
   font-weight: 700;
 } */
 .play {
-  font-size: 1rem;
+  font-size: 2vh;
   width: 100%;
   padding: 20px;
-  background: var(--dark-blue);
 }
 .portfolio-card-pitch {
   text-align: center;
-  font-size: 1rem;
 }
 .portfolio-listing {
   padding-top: 20px;
   padding-bottom: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-gap: 50px;
 
@@ -567,13 +567,4 @@ a:visited,
 a:link {
   color: var(--white);
   text-decoration: none;
-}
-.portfolio {
-  background: var(--orange);
-}
-.portfolio-header h1 {
-  color: var(--white);
-}
-.app-logo {
-  justify-self: center;
 }
