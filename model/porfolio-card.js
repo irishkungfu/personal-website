@@ -10,6 +10,16 @@ var portfolioCards = [
     url: "https://irishkungfu.github.io/quizbreak/"
   },
   {
+    name: "Bit Finder",
+    tags: ["Web Sockets", "jQuery", "API", "Javascript"],
+    tagline: "Find the best bitcoin price!",
+    logo: "./assets/images/icons/bit-finder.png",
+    screenshot: "url goes here",
+    description: "Description goes here (detailed)",
+    active: true,
+    url: "https://irishkungfu.github.io/Train-Schedule/"
+  },
+  {
     name: "Eat Da Burger",
     tags: ["Express", "Node.js", "ORM"],
     tagline: "Demo app using ORMs.",
@@ -49,7 +59,7 @@ var portfolioCards = [
     logo: "./assets/images/icons/gif-search-logo.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
-    active: true,
+    active: false,
     url: "https://irishkungfu.github.io/giphy-API/"
   },
   {
@@ -60,7 +70,7 @@ var portfolioCards = [
     logo: "./assets/images/icons/train-icon.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
-    active: true,
+    active: false,
     url: "https://irishkungfu.github.io/Train-Schedule/"
   }
 ];
