@@ -22,22 +22,22 @@ app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
+app.set('views', path.join(__dirname, 'views'));
 //Set static path
 // app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   var hbsObject = {
     sites: portfolio
   };
   res.render("index", hbsObject);
 });
 
-app.get("/contact", function(req, res) {
+app.get("/contact", function (req, res) {
   res.render("contact");
 });
 
-app.post("/contact", function(req, res) {
+app.post("/contact", function (req, res) {
   res.render("contact");
   var newUser = {
     name: req.body.name,
@@ -76,7 +76,7 @@ app.post("/contact", function(req, res) {
         "<br><br>" +
         newUser.message
     },
-    function(err, info) {
+    function (err, info) {
       if (err) {
         console.log("Error: " + err);
       } else {
@@ -86,6 +86,6 @@ app.post("/contact", function(req, res) {
   );
 });
 
-app.listen(8080, function() {
+app.listen(8080, function () {
   console.log("Server Started on port 8080");
 });
