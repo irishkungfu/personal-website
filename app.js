@@ -1,8 +1,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-
+var exphbs = require("express-handlebars");
 var app = express();
+var router = express.Router();
+var portfolio = require("./model/porfolio-card");
 
 // var logger = function(req, res, next) {
 //     console.log("Logging...");
@@ -11,19 +13,24 @@ var app = express();
 
 // app.use(logger);
 
-//View Engine
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-
 //bodyParser Middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+//View Engine
+// app.use(routes);
+app.use(express.static("public"));
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 //Set static path
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function(req, res) {
-  res.render("index");
+  var hbsObject = {
+    sites: portfolio
+  };
+  res.render("index", hbsObject);
 });
 
 app.get("/contact", function(req, res) {
