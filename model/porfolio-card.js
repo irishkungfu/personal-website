@@ -12,12 +12,12 @@ var portfolioCards = [
   {
     name: "Bit Finder",
     tags: ["Web Sockets", "jQuery", "API", "Javascript"],
-    tagline: "Find the best bitcoin price!",
+    tagline: "Find the best bitcoin price across exchanges!",
     logo: "./assets/images/icons/bit-finder.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
     active: true,
-    url: "https://irishkungfu.github.io/Train-Schedule/"
+    url: "https://irishkungfu.github.io/just_a_little_bit2/"
   },
   {
     name: "Eat Da Burger",
