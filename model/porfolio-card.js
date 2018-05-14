@@ -22,7 +22,7 @@ var portfolioCards = [
   {
     name: "Eat Da Burger",
     tags: ["Express", "Node.js", "ORM"],
-    tagline: "Demo app using ORMs.",
+    tagline: "Just a simple demo app using ORMs.",
     logo: "./assets/images/icons/burger-logo.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
