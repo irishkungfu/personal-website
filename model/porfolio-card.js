@@ -1,5 +1,15 @@
 var portfolioCards = [
   {
+    name: "Market Chart",
+    tags: ["React", "API"],
+    tagline: "Check your stock prices",
+    logo: "./assets/images/icons/market_chart.png",
+    screenshot: "url goes here",
+    description: "Description goes here (detailed)",
+    active: true,
+    url: "https://market-chart-3.herokuapp.com/"
+  },
+  {
     name: "Quiz Break",
     tags: ["API", "jQuery"],
     tagline: "Test your wit in this addictive game!",
@@ -26,8 +36,18 @@ var portfolioCards = [
     logo: "./assets/images/icons/burger-logo.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
-    active: true,
+    active: false,
     url: "https://whispering-cove-98673.herokuapp.com/"
+  },
+  {
+    name: "Periodic Table",
+    tags: ["HTML", "CSS", "Javascript", "CSS Grid"],
+    tagline: "A study of CSS-grid",
+    logo: "./assets/images/icons/pt.png",
+    screenshot: "url goes here",
+    description: "Description goes here (detailed)",
+    active: true,
+    url: "https://irishkungfu.github.io/periodic-table/"
   },
   {
     name: "Pepper & Carrot",
@@ -37,14 +57,14 @@ var portfolioCards = [
     logoSetting: "10%",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
-    active: true,
+    active: false,
     url: "https://irishkungfu.github.io/pepper-and-carrot/"
   },
   {
     name: "Hangman",
     tags: ["Javascript", "jQuery", "CSS", "HTML"],
     tagline:
-      "Play classic movie hangman. Guess the titles and see a clip from your favorite classics.",
+      "Play classic movie hangman.",
     logo: "./assets/images/icons/hangman.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
