@@ -1,8 +1,20 @@
 var portfolioCards = [
   {
+    name: "CrossFade Design",
+    tags: ["React", "CSS", "HTML"],
+    tagline:
+      "Freelance project for CrossFade Design a film and concert production company",
+    logo: "./assets/images/icons/crossfade-logo.png",
+    screenshot: "url goes here",
+    description: "Description goes here (detailed)",
+    active: true,
+    url: "http://www.crossfadedesign.com"
+  },
+  {
     name: "Market Chart",
     tags: ["React", "API"],
-    tagline: "Check your stock prices",
+    tagline:
+      "Analyze stocks, get the latest news on your favorite companies, and spot trends.",
     logo: "./assets/images/icons/market_chart.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
@@ -63,8 +75,7 @@ var portfolioCards = [
   {
     name: "Hangman",
     tags: ["Javascript", "jQuery", "CSS", "HTML"],
-    tagline:
-      "Play classic movie hangman.",
+    tagline: "Play classic movie hangman.",
     logo: "./assets/images/icons/hangman.png",
     screenshot: "url goes here",
     description: "Description goes here (detailed)",
