@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var app = express();
 var router = express.Router();
 var portfolio = require("./model/porfolio-card");
+require('dotenv').config();
 
 // var logger = function(req, res, next) {
 //     console.log("Logging...");
@@ -22,7 +23,7 @@ app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 //Set static path
 // app.use(express.static(path.join(__dirname, "public")));
 
@@ -53,9 +54,13 @@ app.post("/contact", function (req, res) {
 
   // This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
   var auth = {
+    // auth: {
+    //   api_key: "key-06e6b46b102891f53f5cf330e362d73f",
+    //   domain: "sandbox72d77368bbd542999a0d11c99d26b570.mailgun.org"
+    // }
     auth: {
-      api_key: "key-06e6b46b102891f53f5cf330e362d73f",
-      domain: "sandbox72d77368bbd542999a0d11c99d26b570.mailgun.org"
+      api_key: process.env.API_KEY,
+      domain: process.env.DOMAIN
     }
   };
 
