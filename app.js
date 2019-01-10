@@ -3,29 +3,21 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var exphbs = require("express-handlebars");
 var app = express();
-var router = express.Router();
+// var router = express.Router();
 var portfolio = require("./model/porfolio-card");
 require('dotenv').config();
 
-// var logger = function(req, res, next) {
-//     console.log("Logging...");
-//     next();
-// }
-
-// app.use(logger);
-
-//bodyParser Middleware
+// bodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-//View Engine
+
+// View Engine
 // app.use(routes);
 app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "views"));
-//Set static path
-// app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
   var hbsObject = {
@@ -48,16 +40,10 @@ app.post("/contact", function (req, res) {
   console.log(newUser);
 
   // Nodemailer Mailgun Setup
-
   var nodemailer = require("nodemailer");
   var mg = require("nodemailer-mailgun-transport");
 
-  // This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
   var auth = {
-    // auth: {
-    //   api_key: "key-06e6b46b102891f53f5cf330e362d73f",
-    //   domain: "sandbox72d77368bbd542999a0d11c99d26b570.mailgun.org"
-    // }
     auth: {
       api_key: process.env.API_KEY,
       domain: process.env.DOMAIN
@@ -68,7 +54,7 @@ app.post("/contact", function (req, res) {
 
   nodemailerMailgun.sendMail(
     {
-      from: "myemail@example.com",
+      from: "inquiry@jaredgip.in",
       to: "jared.gilpin@gmail.com", // An array if you have multiple recipients.
       subject: "New inquiry from " + newUser.name,
       //You can use "html:" to send HTML email content. It's magic!
