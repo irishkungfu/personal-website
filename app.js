@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var exphbs = require("express-handlebars");
 var app = express();
+
 // var router = express.Router();
 var portfolio = require("./model/porfolio-card");
 require('dotenv').config();
@@ -19,6 +20,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "views"));
 
+// load in the handlebars variable
 app.get("/", function (req, res) {
   var hbsObject = {
     sites: portfolio

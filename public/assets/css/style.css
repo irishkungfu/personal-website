@@ -40,28 +40,19 @@ h1 {
 }
 h2 {
   color: #333;
-  /* margin-bottom: 10px; */
   padding-bottom: 20px;
   color: var(--orange);
 }
-/* h3 {
-  font-size: 1.5rem;
-} */
+
 .position,
 .dates {
   font-weight: 600;
 }
-/* div,
-h3,
-img,
-nav {
-  border: 1px solid orange;
-} */
+
 
 .container {
   display: grid;
   background: white;
-  /* Add 100vh to first row for prod. */
   grid-template-rows: 100vh repeat(4, auto);
 }
 .front-page {
@@ -115,7 +106,6 @@ nav {
   color: var(--dark-blue);
   font-weight: 700;
   font-size: 2em;
-  /* visibility: hidden; */
 }
 a.nav-link:link {
   color: var(--white);
@@ -140,7 +130,6 @@ a.nav-link:visited {
 @media screen and (max-width: 768px) {
   .header {
     grid-template-columns: 1fr;
-    /* background: red; */
   }
   .nav {
     justify-self: center;
@@ -167,7 +156,6 @@ a.nav-link:visited {
   padding: 2em;
   display: grid;
   justify-items: center;
-  /* align-items: end; */
   align-self: center;
   grid-template-rows: repeat(3, minmax(10px, max-content));
 }
@@ -236,12 +224,8 @@ a.nav-link:visited {
     height: 100%;
     align-self: end;
   }
-  /* .intro {
-    font-size: 8vh;
-  } */
   .social-icons {
     justify-content: center;
-    /* padding-bottom: 40px; */
   }
 }
 
@@ -305,12 +289,6 @@ h1 {
 @media screen and (max-width: 768px) {
   .employment {
     grid-template-columns: 1fr;
-    /* grid-template-areas:
-      "resume-header"
-      "resume-download"
-      "skills-section"
-      "work-section"
-      "education-section"; */
   }
   .resume-wrapper {
     grid-template-columns: 1fr;
@@ -461,7 +439,6 @@ h3 {
   filter: invert(30%);
   justify-self: end;
   padding-right: 20px;
-  /* filter: grayscale(100%); */
   max-width: 120px;
 }
 .employer-body {
@@ -497,14 +474,6 @@ h3 {
   justify-content: center;
   grid-template-rows: auto minmax(min-content, 50px);
 }
-/* .bright-button {
-  padding: 10px;
-  color: var(--white);
-  background: var(--orange);
-  border: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-} */
 .play {
   font-size: 1rem;
   width: 100%;
@@ -524,7 +493,6 @@ h3 {
   grid-gap: 50px;
 
   grid-auto-flow: row;
-  /* grid-template-rows: repeat(2, minmax(200px, max-content)); */
 }
 @media screen and (max-width: 768px) {
   .portfolio-listing {
@@ -548,7 +516,7 @@ h3 {
   bottom: 0;
   margin: auto;
 
-  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  /* this to solve "the content will not be cut when the window is smaller than the content": */
   max-width: 100%;
   max-height: 100%;
   overflow: auto;
